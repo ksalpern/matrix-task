@@ -38,14 +38,21 @@ const Matrix: React.FC = () => {
   };
 
   return (
-    <div>
-      <button onClick={generateMatrix}>Generate Matrix</button>
+    <div className="matrix">
+      <button onClick={generateMatrix}>
+        <span> Generate Matrix</span>
+      </button>
       <table>
         <tbody>
           {matrix.map((row, rowIndex) => (
             <tr key={`row-${rowIndex}`}>
               {row.map((cell, cellIndex) => (
-                <td key={`cell-${rowIndex}-${cellIndex}`} onClick={() => handleCellClick(rowIndex, cellIndex)}>{cell}</td>
+                <td
+                  key={`cell-${rowIndex}-${cellIndex}`}
+                  onClick={() => handleCellClick(rowIndex, cellIndex)}
+                >
+                  {cell}
+                </td>
               ))}
               <td>{row.reduce((a, b) => a + b)}</td>
             </tr>
@@ -71,5 +78,5 @@ const Matrix: React.FC = () => {
     </div>
   );
 };
- 
+
 export default Matrix;
