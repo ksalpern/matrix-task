@@ -23,6 +23,14 @@ code {
   color: aliceblue;
 }
 
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
 button {
   position: relative;
   width: 150px;
@@ -94,24 +102,24 @@ table {
   color: rgb(255, 255, 255);
   padding: 10px;
   border-radius: 20px;
-  border: 5px solid rgba(255, 255, 255, .1);
+  border: 5px solid rgba(255, 255, 255, 0.1);
   box-shadow: -5px -5px 15px rgba(255, 255, 255, 0.1),
-  5px 5px 15px rgba(0, 0, 0, 0.35),
-  inset -5px -5px 15px rgba(255, 255, 255, 0.1),
-  inset 5px 5px 15px rgba(0, 0, 0, 0.35);
+    5px 5px 15px rgba(0, 0, 0, 0.35),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+    inset 5px 5px 15px rgba(0, 0, 0, 0.35);
 }
 tbody {
 }
 
 td {
   min-width: 40px;
-  background: rgba(0, 0, 0, 0.161); 
+  background: rgba(0, 0, 0, 0.161);
   border-radius: 5px;
   cursor: pointer;
   padding: 0 2px;
   transition: all 0.15s;
 }
-td:hover{
-  background: rgb(49, 217, 217); 
+td:hover {
+  background: rgb(49, 217, 217);
   color: rgb(30, 29, 29);
 }
