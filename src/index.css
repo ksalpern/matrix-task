@@ -109,7 +109,9 @@ td {
   border-radius: 5px;
   cursor: pointer;
   padding: 0 2px;
+  transition: all 0.15s;
 }
 td:hover{
-  background: rgba(0, 0, 0, 0.316); 
+  background: rgb(49, 217, 217); 
+  color: rgb(30, 29, 29);
 }
