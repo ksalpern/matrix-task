@@ -21,6 +21,22 @@ const Matrix: React.FC = () => {
     setMatrix(newMatrix);
   };
 
+  //increase each cell on click
+  const handleCellClick = (rowIndex: number, cellIndex: number) => {
+    const newMatrix = matrix.map((row, rIndex) => {
+      if (rIndex === rowIndex) {
+        return row.map((cell, cIndex) => {
+          if (cIndex === cellIndex) {
+            return cell + 1;
+          }
+          return cell;
+        });
+      }
+      return row;
+    });
+    setMatrix(newMatrix);
+  };
+
   return (
     <div>
       <button onClick={generateMatrix}>Generate Matrix</button>
@@ -29,7 +45,7 @@ const Matrix: React.FC = () => {
           {matrix.map((row, rowIndex) => (
             <tr key={`row-${rowIndex}`}>
               {row.map((cell, cellIndex) => (
-                <td key={`cell-${rowIndex}-${cellIndex}`}>{cell}</td>
+                <td key={`cell-${rowIndex}-${cellIndex}`} onClick={() => handleCellClick(rowIndex, cellIndex)}>{cell}</td>
               ))}
               <td>{row.reduce((a, b) => a + b)}</td>
             </tr>
